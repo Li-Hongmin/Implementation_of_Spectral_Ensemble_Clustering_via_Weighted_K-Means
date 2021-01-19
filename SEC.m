@@ -19,9 +19,7 @@ function label = SEC(baseCls,k)
     
     sumb = sum(B);
     wb = B*sumb';
-    
     %% kmeans with weight
-    opts.weight = wb;
-    label = fkmeans(B./wb, k, opts);
+    label = weighted_kmeans(B./wb, k, wb);
     
 end
