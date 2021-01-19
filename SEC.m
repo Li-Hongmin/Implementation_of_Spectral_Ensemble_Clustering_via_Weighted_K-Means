@@ -22,6 +22,6 @@ function label = SEC(baseCls,k)
     
     %% kmeans with weight
     opts.weight = wb;
-    label = fkmeans(B, k, opts);
+    label = fkmeans(B./wb, k, opts);
     
 end
