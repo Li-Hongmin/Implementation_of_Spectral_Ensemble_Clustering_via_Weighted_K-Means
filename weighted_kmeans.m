@@ -9,7 +9,6 @@ k = X(randsample(size(X,1),k),:);
 [~,label] = max(bsxfun(@minus,k*X',0.5*sum(k.^2,2)));
 k = size(k,1);
 last = 0;
-iter = 0;
 while any(label ~= last)
     
     % remove empty clusters
